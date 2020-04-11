@@ -56,6 +56,17 @@ class MapRouteProgressChangeListenerTest {
     }
 
     @Test
+    fun `should not update maneuver arrow when directionsRoute is null`() {
+        val routeProgress: RouteProgress = mockk {
+            every { route() } returns null
+        }
+
+        progressChangeListener.onRouteProgressChanged(routeProgress)
+
+        verify(exactly = 0) { routeArrow.addUpcomingManeuverArrow(routeProgress) }
+    }
+
+    @Test
     fun `should update maneuver arrow when visible`() {
         val newRoute: DirectionsRoute = mockk {
             every { geometry() } returns null
