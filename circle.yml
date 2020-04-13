@@ -344,6 +344,12 @@ commands:
               make 1.0-<< parameters.artifact-type >>-publish-to-<< parameters.repository >>
             fi
 
+  check-public-documentation:
+    step:
+      - run:
+          name: Check public documentation
+          command: sh scripts/dokka-validate.sh
+
   generate-documentation:
     steps:
       - run:
@@ -443,6 +449,7 @@ jobs:
       - checkout
       - restore-gradle-cache-1_0
       - static-code-analysis-kotlin
+      - check-public-documentation
       - build-core-debug-1_0
       - build-ui-debug-1_0
       - unit-tests-core-1_0
@@ -515,10 +522,6 @@ jobs:
       - checkout
       - build-release-core-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "artifactory"
           artifact-type: "core"
@@ -535,10 +538,6 @@ jobs:
       - checkout
       - build-release-core-1_0
       - generate-documentation
-#     Uncomment when API' docs will be ready
-#     - run:
-#         name: Check public documentation
-#         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "core"
@@ -554,10 +553,6 @@ jobs:
       - checkout
       - build-release-core-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "core"
@@ -573,10 +568,6 @@ jobs:
       - checkout
       - build-release-core-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "core"
@@ -589,10 +580,6 @@ jobs:
       - checkout
       - build-release-ui-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "artifactory"
           artifact-type: "ui"
@@ -609,10 +596,6 @@ jobs:
       - checkout
       - build-release-ui-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "ui"
@@ -628,10 +611,6 @@ jobs:
       - checkout
       - build-release-ui-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "ui"
@@ -647,10 +626,6 @@ jobs:
       - checkout
       - build-release-ui-1_0
       - generate-documentation
-      #     Uncomment when API' docs will be ready
-      #     - run:
-      #         name: Check public documentation
-      #         command: sh scripts/dokka-validate.sh
       - publish-artifacts:
           repository: "bintray"
           artifact-type: "ui"
