@@ -3,7 +3,7 @@ package com.mapbox.navigation.core.trip.session
 import android.location.Location
 
 /**
- * Location Observer which allow ot listen location's updates
+ * An interface which enables listening to location updates
  */
 interface LocationObserver {
 

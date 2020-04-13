@@ -68,7 +68,7 @@ internal interface DirectionsSession {
     fun unregisterAllRoutesObservers()
 
     /**
-     * Interrupt route-fetcher request
+     * Interrupts the route-fetching request
      */
     fun shutDownSession()
 }

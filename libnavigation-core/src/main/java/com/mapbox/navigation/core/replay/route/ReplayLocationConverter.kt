@@ -6,8 +6,8 @@ import com.mapbox.geojson.LineString
 import com.mapbox.geojson.Point
 
 /**
- * Replay location converter is contract for [ReplayRouteLocationEngine] how to interpolate speed and
- * time on the route
+ * The [ReplayLocationConverter] interface is for the [ReplayRouteLocationEngine] to interpolate
+ * speed and time on the route.
  */
 interface ReplayLocationConverter {
 

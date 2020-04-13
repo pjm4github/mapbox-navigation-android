@@ -3,12 +3,12 @@ package com.mapbox.navigation.core.trip.session
 import com.mapbox.navigation.core.MapboxNavigation
 
 /**
- * Observer is working with navigation by the route, but not in free-drive mode.
- * Could be registered via [MapboxNavigation]
+ * This interface is for turn-by-turn route navigation, but not in free-drive mode.
+ * This interface can be registered via a [MapboxNavigation] object.
  */
 interface OffRouteObserver {
     /**
-     * Called whenever user is off route
+     * Called whenever the user is off route
      */
     fun onOffRouteStateChanged(offRoute: Boolean)
 }

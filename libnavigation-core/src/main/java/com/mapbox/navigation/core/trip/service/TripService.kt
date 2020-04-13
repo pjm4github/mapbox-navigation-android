@@ -20,7 +20,7 @@ interface TripService {
     fun stopService()
 
     /**
-     * Update tips' information on notification bar
+     * Update the trip's information in the notification bar
      */
     fun updateNotification(routeProgress: RouteProgress)
 

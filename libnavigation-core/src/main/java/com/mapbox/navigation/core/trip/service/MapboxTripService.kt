@@ -116,7 +116,7 @@ class MapboxTripService(
     }
 
     /**
-     * Update tips' information on notification bar
+     * Update the trip's information in the notification bar
      */
     override fun updateNotification(routeProgress: RouteProgress) {
         tripNotification.updateNotification(routeProgress)

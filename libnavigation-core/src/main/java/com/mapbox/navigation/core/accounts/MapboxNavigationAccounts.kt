@@ -11,7 +11,7 @@ import java.lang.IllegalStateException
 
 // TODO: make the class internal
 /**
- * Generate and retain SKU token according internal policy
+ * This class generates and retains the Navigation SDK's SKU token according to internal Mapbox policies
  */
 class MapboxNavigationAccounts private constructor() : SkuTokenProvider {
 

@@ -66,7 +66,7 @@ class ReplayRouteLocationEngine(
     }
 
     /**
-     * Assign new new route. If [moveTo] was called before, stay invalid
+     * Assign a new route. If [moveTo] was called before, stay invalid
      */
     fun assign(route: DirectionsRoute) {
         this.route = route

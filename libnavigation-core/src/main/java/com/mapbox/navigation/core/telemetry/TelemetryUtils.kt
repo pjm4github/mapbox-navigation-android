@@ -21,7 +21,7 @@ private const val SCREEN_BRIGHTNESS_MAX = 255.0
 private const val BRIGHTNESS_EXCEPTION_VALUE = -1
 
 /**
- * Encode route geometry to Precision 5
+ * Encode route geometry to *precision 5*
  */
 fun obtainGeometry(directionsRoute: DirectionsRoute?): String =
     ifNonNull(directionsRoute, directionsRoute?.geometry()) { _, geometry ->
@@ -33,7 +33,8 @@ fun obtainGeometry(directionsRoute: DirectionsRoute?): String =
     } ?: ""
 
 /**
- * Provide count of steps in whole route(include legs)
+ * Provide a count of the steps in a whole route, including the legs
+ *
  * @see [com.mapbox.api.directions.v5.models.LegStep]
  */
 fun obtainStepCount(directionsRoute: DirectionsRoute?): Int =
@@ -46,7 +47,8 @@ fun obtainStepCount(directionsRoute: DirectionsRoute?): Int =
     } ?: 0
 
 /**
- * Provide absolute distance(between 2 points, non include geometry)
+ * Provide the absolute distance between 2 points, not including the geometry
+ *
  * @return Int distance unit kilometer
  */
 fun obtainAbsoluteDistance(
@@ -60,14 +62,14 @@ fun obtainAbsoluteDistance(
 }
 
 /**
- * Provide last point of [DirectionsRoute]
+ * Provide the last [Point] in a [DirectionsRoute]
  */
 fun obtainRouteDestination(route: DirectionsRoute?): Point =
     route?.legs()?.lastOrNull()?.steps()?.lastOrNull()?.maneuver()?.location()
         ?: Point.fromLngLat(0.0, 0.0)
 
 /**
- * Provide volume level in range *0..100*
+ * Provide the volume level in the percentages(range is *0..100*)
  */
 fun obtainVolumeLevel(context: Context): Int {
     val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager

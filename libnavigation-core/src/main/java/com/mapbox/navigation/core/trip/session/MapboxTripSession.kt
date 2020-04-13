@@ -114,7 +114,7 @@ class MapboxTripSession(
     override fun getState(): TripSessionState = state
 
     /**
-     * Start MapboxTipSession
+     * Start MapboxTripSession
      */
     override fun start() {
         if (state == TripSessionState.STARTED) {
@@ -135,7 +135,7 @@ class MapboxTripSession(
     }
 
     /**
-     * Stop MapboxTipSession
+     * Stop MapboxTripSession
      */
     override fun stop() {
         if (state == TripSessionState.STOPPED) {
@@ -186,8 +186,8 @@ class MapboxTripSession(
     }
 
     /**
-     * Register [RouteProgressObserver] to receive information about about routing's state
-     * like [BannerInstructions], [RouteLegProgress] and ect.
+     * Register [RouteProgressObserver] to receive information about routing's state
+     * like [BannerInstructions], [RouteLegProgress], etc.
      *
      * @see [RouteProgress]
      */

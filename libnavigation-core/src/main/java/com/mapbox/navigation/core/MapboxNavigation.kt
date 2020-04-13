@@ -441,7 +441,7 @@ constructor(
     }
 
     /**
-     * Start observe faster route of trip session via [FasterRouteObserver]
+     * Start observing faster routes for a trip session via [FasterRouteObserver]
      *
      * @param fasterRouteObserver FasterRouteObserver
      */
@@ -450,7 +450,7 @@ constructor(
     }
 
     /**
-     * Stop observe faster route.
+     * Stop observing the possibility of faster routes.
      */
     fun detachFasterRouteObserver() {
         fasterRouteController.stop()
@@ -577,7 +577,7 @@ constructor(
     companion object {
 
         /**
-         * Send user feedback on any issue or problem with Navigation SDK
+         * Send user feedback about an issue or problem with the Navigation SDK
          *
          * @param feedbackType one of [FeedbackEvent.FeedbackType]
          * @param description description message

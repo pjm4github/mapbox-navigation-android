@@ -90,7 +90,7 @@ class MapboxDistanceFormatter private constructor(
             apply { this.roundingIncrement = roundingIncrement }
 
         /**
-         * Substitute locale. By default is taken from applicationContext
+         * Use a non-default [Locale]. By default, the [Locale] is used from applicationContext
          *
          * @return Builder
          */
