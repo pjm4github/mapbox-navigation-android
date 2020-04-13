@@ -345,7 +345,7 @@ commands:
             fi
 
   check-public-documentation:
-    step:
+    steps:
       - run:
           name: Check public documentation
           command: sh scripts/dokka-validate.sh
