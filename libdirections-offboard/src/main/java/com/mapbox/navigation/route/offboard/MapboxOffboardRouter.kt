@@ -90,6 +90,10 @@ class MapboxOffboardRouter(
         mapboxDirectionsRefresh = null
     }
 
+    override fun cleanUp() {
+        cancel()
+    }
+
     /**
      * Refresh the traffic annotations for a given [DirectionsRoute]
      *

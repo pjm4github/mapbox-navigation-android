@@ -126,6 +126,10 @@ class MapboxOnboardRouter(
         mainJobControl.job.cancelChildren()
     }
 
+    override fun cleanUp() {
+        cancel()
+    }
+
     /**
      * Refresh the traffic annotations for a given [DirectionsRoute]
      *

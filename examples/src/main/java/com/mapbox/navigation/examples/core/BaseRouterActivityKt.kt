@@ -218,7 +218,7 @@ abstract class BaseRouterActivityKt :
 
     override fun onDestroy() {
         super.onDestroy()
-        router.cancel()
+        router.cleanUp()
         mapboxMap?.removeOnMapClickListener(this)
         mapView.onDestroy()
     }
